@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Keywords" content="厉害很厉害" />
+        <meta name="Description" content="网易是中国领先的互联网技术公司，">
+        <title>HTML练习</title>
+</head>
+
+<!--<frameset rows="20%,*">
+        <frameset src="top.html"></frameset>
+        <frameset cols="40%,*">
+                <frameset src="left.html">sds</frameset>
+                <frameset src="right.html">sdsds</frameset>
+        </frameset>
+</frameset>
+注意：html5被废除的标签 -->
+
+<body>
+        <form action="">
+                右边会出现一个页面
+                <iframe src="../pages/top.html"></iframe>
+                左边会出现一个页面
+                <form action="">
+                        <input type="text">
+                </form>
+
+                <form action="">
+                        姓名:<input value="这里姓名"><br>
+                        昵称:<input value="这里昵称"><br>
+                        名字:<input type="text" value="name" disabled=""><br>
+                        密码:<input type="password" value="pwd" size="50"><br>
+                        性别:<input type="radio" name="geder" id="radio1" value="male" checked="">男
+                        <input type="radio" name="geder" id="radio2" value="female">女<br>
+                        爱好:<input type="checkbox" name="love" value="eat">吃饭
+                        <input type="checkbox" name="love" value="eat2">吃饭2
+                        <input type="checkbox" name="love" value="eat3">吃饭3
+
+                </form>
+                <hr>
+                <form>
+                        <input type="button" value="普通按钮"><br>
+                        <input type="submit" value="提交按钮"><br>
+                        <input type="reset" value="重置按钮"><br>
+                        <input type="image" value="图片按钮1"><br>
+                        <input type="image" src="../image/柠檬图标.jpg" width="100" value="图片按钮2"><br>
+                        <input type="file" value="文件选择框"><br>
+                        <input type="checkbox" id="kk"><label for="kk">10天内免登陆</label>
+                </form>
+                <hr>
+                <form action="">
+                        <input type="radio" name="sex" id="nan" /> <label for="nan">男</label>
+                        <input type="radio" name="sex" id="nv" /> <label for="nv">女</label>
+                </form>
+                <hr>
+                <form action="">
+                        <select name="" id="" size="3">
+                                <option>小学</option>
+                                <option>初中</option>
+                                <option>高中</option>
+                                <option>大专</option>
+                                <option selected="">研究生</option>
+                        </select>
+                        <br><br>
+                        <select name="" id="" size="4">
+                                <option>小学</option>
+                                <option>初中</option>
+                                <option>高中</option>
+                                <option>大专</option>
+                                <option selected="">研究生</option>
+                        </select>
+
+                        <select name="" id="" size="4" multiple="">
+                                <!-- multiple属性可多选 -->
+                                <option>小学</option>
+                                <option>初中</option>
+                                <option>高中</option>
+                                <option>大专</option>
+                                <option selected="">研究生</option>
+                        </select>
+
+                        <textarea name="" id="" cols="20" rows="10" readonly>不爱摄影不懂设计的程序员不是一个号的产品经理</textarea>
+                        <!-- rows指定文本区域的行数。cols指定文本区域的列数，readonly只读属性-->
+                </form>
+                <hr>
+
+                <form name="" id="">
+                        <fieldset>
+                                <legend>个人信息</legend>
+                                姓名:<input value="这里姓名"><br>
+                                昵称:<input value="这里昵称"><br>
+                                名字:<input type="text" value="name" disabled=""><br>
+                                密码:<input type="password" value="pwd" size="50"><br>
+                                性别:<input type="radio" name="geder" id="radio1" value="male" checked="">男
+                                <input type="radio" name="geder" id="radio2" value="female">女<br>
+                        </fieldset>
+
+                        <fieldset>
+                                <legend>其他选项</legend>
+                                爱好:<input type="checkbox" name="love" value="eat">吃饭
+                                <input type="checkbox" name="love" value="eat2">吃饭2
+                                <input type="checkbox" name="love" value="eat3">吃饭3
+
+                        </fieldset>
+                </form>
+        </form>
+</body>
+
+
+</html>

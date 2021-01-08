@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        form {
+            width: 100%;
+            max-width: 6400px;
+            min-width: 320px;
+            margin: 0 auto;
+            font-family: "微软雅黑";
+            font-size: 20px;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            height: 30px;
+            margin: 0 auto;
+        }
+    </style>
+</body>
+<form action="">
+    <fieldset>
+        <legend>表单属性</legend>
+        <label for="">
+            用户名：<input type="text" placeholder="例如：smyhvae" autofocus name="userName" autocomplete="on" required />
+        </label>
+
+        <label for="">
+            电话:<input type="tel" pattern="1\d{10}" />
+        </label>
+
+        <label for="">
+            multiple的表单:<input type="file" multiple>
+        </label>
+
+        <input type="file" name="file" multiple>
+
+        <input type="submit">
+    </fieldset>
+</form>
+
+<form action="">
+    <fieldset>
+        <legend>表单属性</legend>
+        <label for="">
+            邮箱：<input type="email" name="" id="txt1">
+        </label>
+        <label for="">
+            输入的次数统计：<input type="text" name="" id="txt2">
+        </label>
+        <input type="submit">
+    </fieldset>
+</form>
+<script>
+    var txt = document.getElementById('txt1');
+    var txt2 = document.getElementById('txt2');
+
+    tx1.oninput = function () {
+        num++;
+
+        txt2.value = num;
+    }
+    txt1.oninvalid = function () {
+        this.setCustomValidity('亲，请输入正确哦');
+    }
+
+</script>
+
+</html>

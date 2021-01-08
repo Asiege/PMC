@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- HTML5兼容性处理，在IE8 及以下版本的浏览器不支持 H5 和 CSS3。解决办法：引入html5shiv.js文件 -->
+    <!-- 头部 -->
+    <header>
+        <ul class="nav"></ul>
+    </header>
+
+    <!-- 主体部分 -->
+    <div class="main">
+
+        <!-- 文章 -->
+        <article>
+            <input type="text" list="mydata" />
+            <datalist id="mydata">
+                <option>小学</option>
+                <option>初中</option>
+                <option>高中</option>
+            </datalist>
+            <!-- input里的list属性和 datalist 进行了绑定 -->
+            <!-- keygen 元素的作用是提供一种验证用户的可靠方法 -->
+            <input type="text" list="celiang">
+            <meter value="81" min="0" max="100" low="60" high="80" id="celiang" />
+            <!-- <meter>元素：度量器 -->
+        </article>
+        <!-- 侧边栏 -->
+        <aside></aside>
+    </div>
+
+    <!-- 底部 -->
+    <footer>
+
+    </footer>
+</body>
+
+</html>
