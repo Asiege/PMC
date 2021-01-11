@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <div class="box" title="盒子" data-my-name="smyhvae" data-content="我是一个DIV">div</div>
+</body>
+<script>
+    var box = document.querySelector('.box');
+
+    //自定义的属性 需要通过dateset[]方式来获取
+    console.log(box.dataset["content"]);
+    console.log(box.dataset["myName"]);
+
+    // 设置自定义属性的值
+    var num = 100;
+    num.index = 10;
+    box.index = 100;
+    box.dataset["content"] = "aaaa";
+</script>
+
+</html>
