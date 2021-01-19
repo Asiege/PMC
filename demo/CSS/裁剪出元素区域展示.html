@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img {
+            width: 320px;
+            height: 320px;
+            border: 1px solid red;
+            background: url(http://img.smyhvae.com/20191006_1410.png) no-repeat;
+            background-size: cover;
+        }
+
+        .div1 {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            margin-bottom: 20px;
+        }
+
+        .div2 {
+            clip-path: polygon(00% 0%, 100% 50%, 50% 100%, 0% 50%, 10% 10%);
+        }
+
+        .div2 :hover {
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%, 10% 10%);
+        }
+
+        /* 错误代码 */
+    </style>
+</head>
+
+<body>
+    <div class="img div1"></div>
+    <div class="img div2"><a></a></div>
+</body>
+
+</html>

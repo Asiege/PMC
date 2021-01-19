@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 500px;
+            height: 200px;
+            margin: 10px auto;
+            border: 1px solid red;
+            /* 线性渐变语法：
+            linear-gradient(方向，起始颜色，终止颜色);
+            方向：to left   to right  to top   to bottom 　角度　30deg
+            起始颜色
+            终止颜色
+        */
+
+        }
+
+        .div2 {
+            background-image: linear-gradient(yellow, green);
+        }
+
+        .div2 {
+            background-image: linear-gradient(135deg, yellow, green);
+        }
+
+        .div3 {
+            background-image: linear-gradient(to right, yellow 0%,
+                    red 40%, green 60%, blue 100%);
+        }
+
+        .div4 {
+            background-image: linear-gradient(45deg,
+                    yellow 0%,
+                    yellow 25%,
+                    blue 25%,
+                    blue 50%,
+                    red 50%,
+                    red 75%,
+                    green 75%,
+                    green 100%);
+        }
+
+        .div5 {
+            background-image: linear-gradient(to right,
+                    #000 0%,
+                    #000 25%,
+                    #fff 25%,
+                    #fff 50%,
+                    #000 50%,
+                    #000 75%,
+                    #fff 75%,
+                    #fff 100%);
+        }
+
+        .div6 {
+            background-image: radial-gradient(200px at center, yellow, green);
+            /*
+            径向渐变：
+            radial-gradient（辐射的半径大小, 中心的位置，起始颜色，终止颜色）;
+            中心点位置：at  left  right  center bottom  top
+             */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div class="div2"></div>
+    <div class="div3"></div>
+    <div class="div4"></div>
+    <div class="div5"></div>
+    <div class="div6"></div>
+
+</body>
+
+</html>
