@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        /*为什么要写这个？*/
+        /*不希望我们的页面被nav挡住*/
+        padding-top: 60px;
+        /*IE6不兼容固定定位，所以这个padding没有什么用，就去掉就行了*/
+        _padding-top: 0;
+    }
+
+    .nav {
+        position: fixed;
+        /* 固定定位 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        /* 宽度无线延申 */
+        height: 60px;
+        background-color: #333;
+        /* 黑色背景 */
+        z-index: 1;
+        /* 表示谁压着谁。数值大的压盖住数值小的 */
+    }
+
+    .inner_c {
+        width: 1000px;
+        /* 导航条宽度 */
+        height: 60px;
+        margin: 0 auto;
+
+    }
+
+    .inner_c ul {
+        list-style: none;
+        /* 去除ul标签样式 */
+    }
+
+    .inner_c ul li {
+        float: left;
+        /* 向左浮动 */
+        width: 100px;
+        height: 60px;
+        text-align: center;
+        line-height: 60px;
+        /* 行高 */
+    }
+
+    .inner_c ul li a {
+        display: block;
+        /* 转块元素 */
+        width: 100px;
+        height: 60px;
+        color: white;
+        text-decoration: none;
+        /* 去下划线 */
+    }
+
+    .inner_c ul li a:hover {
+        background-color: gold;
+        /* 鼠标移动到位置改变背景 */
+    }
+</style>
+</head>
+
+<body>
+    <div class="nav">
+        <div class="inner_c">
+            <ul>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+                <li><a href="#">网页栏目</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

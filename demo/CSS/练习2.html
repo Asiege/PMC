@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    .box {
+        width: 308px;
+        height: 307px;
+        margin: 100px;
+        border: 1px solid red;
+        position: relative;
+        /* 相对定位 */
+    }
+
+    .box .ig img {
+        width: 308px;
+        height: 196px;
+    }
+
+    .box .box2 {
+        display: block;
+        /*转为块级元素，才能设置span的宽高*/
+        width: 52px;
+        height: 28px;
+        background-image: url(http://img.smyhvae.com/20180116_1115.png);
+        background-position: -108px 0px;
+        /*这里用到了精灵图*/
+        position: absolute;
+        top: -9px;
+        left: 13px;
+    }
+
+    h5 {
+        display: block;
+        color: white;
+        position: absolute;
+        top: 156px;
+        background-color: black;
+        line-height: 40px;
+        width: 308px;
+        height: 40px;
+        text-indent: 20px;
+    }
+</style>
+
+<body>
+
+</body>
+<div class="box">
+    <span class="box2"></span>
+    <div class="ig">
+        <img src="../../image/wangdatubiao.jpg" alt="">
+    </div>
+    <h5>广东深圳宝安区建安一路海雅缤纷城4楼</h4>
+</div>
+
+</html>
