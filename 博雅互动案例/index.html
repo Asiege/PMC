@@ -5,9 +5,225 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            font-size: 14px;
+            font-family: "Microsoft YaHei", "SimSun";
+        }
+
+        .header {
+            height: 70px;
+            background-color: #191d3a;
+        }
+
+
+        .inner_c {
+            width: 1100px;
+            margin: 0 auto;
+        }
+
+        .inner_c2 {
+            width: 1150px;
+            margin: 0 auto;
+        }
+
+        .header .nav ul {
+            list-style: none;
+        }
+
+        .header .logo {
+            float: left;
+            margin-top: 20px;
+            width: 230px;
+        }
+
+        .header .logo img {
+            float: left;
+            width: 196px;
+            height: 35px;
+        }
+
+        .header .inner_c .nav {
+            float: left;
+        }
+
+        .header .nav ul li {
+            float: left;
+            width: 100px;
+            height: 70px;
+            line-height: 70px;
+            border-left: 1px solid #242947;
+        }
+
+        .header .nav ul li .last {
+            border-right: 1px solid #242947;
+        }
+
+        .nav ul li a {
+            display: block;
+            color: #818496;
+            width: 100px;
+            height: 70px;
+            text-decoration: none;
+            text-align: center;
+            background-color: #191d3a;
+        }
+
+        .header .nav ul li a:hover {
+            color: white;
+            background-color: #252947;
+        }
+
+        .header .nav ul li a.current {
+            color: white;
+            background-color: #252947;
+        }
+
+        .header .jrwm_box {
+            float: left;
+            height: 70px;
+            width: 125px;
+            padding-left: 40px;
+            padding-top: 12px;
+        }
+
+        .header .jrwm_box .jrwm {
+            height: 44px;
+            background-image: url(images/jrwm.png);
+            background-repeat: no-repeat;
+            text-align: center;
+        }
+
+        .header .jrwm_box .jrwm a {
+            display: block;
+            line-height: 44px;
+            text-decoration: none;
+            color: white;
+        }
+
+        .banner1 {
+            background-color: #191d3a;
+        }
+
+        .banner2 {
+            background: url(images/banner1.jpg) no-repeat center;
+            height: 460px;
+        }
+
+        .content {
+            margin-top: 50px;
+        }
+
+        .product {
+            height: 229px;
+            border-bottom: 1px solid #DBE1E7;
+        }
+
+        .product ul li:hover {
+            background-color: rgb(56, 183, 116);
+            color: white;
+
+        }
+
+        .product ul li {
+            height: 210px;
+            float: left;
+            margin-left: 40px;
+        }
+
+        .product ul {
+            list-style: none;
+
+        }
+
+        .product img {
+            height: 140px;
+        }
+
+        h5 {
+            text-align: center;
+            font-size: 16px;
+            font-family: "微软雅黑";
+            color: #191d3a;
+            line-height: 40px;
+        }
+
+        p.djbf {
+            text-align: center;
+            line-height: 16px;
+
+        }
+
+        .product ul li p.djbf a {
+            font-size: 12px;
+            color: #38B774;
+            text-decoration: none;
+            background: url(images/arrow.png) no-repeat right center;
+            padding: 12px;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="header">
+        <div class="inner_c">\
+            <div class="logo">
+                <img src="images/logo.png" alt="">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#" class="current">首页</a></li>
+                    <li><a href="#">雅博游戏</a></li>
+                    <li><a href="#">雅博新闻</a></li>
+                    <li><a href="#">关于我们</a></li>
+                    <li><a href="#">客服中心</a></li>
+                    <li><a href="#" class="last">投资者关系</a></li>
+                </ul>
+            </div>
+            <div class="jrwm_box">
+                <div class="jrwm">
+                    <a href="www.baidu.com">加入我们</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 分割 -->
+    <div class="banner1">
+        <div class="banner2"></div>
+    </div>
+    <!-- 分割 -->
+
+    <div class="content inner_c2">
+        <div class="product">
+            <ul>
+                <li>
+                    <img src="images/top1.jpg" alt="">
+                    <h5>麻将全集</h5>
+                    <p class="djbf"><a href="#">点击播放</a></p>
+                </li>
+                <li>
+                    <img src="images/top2.jpg" alt="">
+                    <h5>雅博棋牌</h5>
+                    <p class="djbf"><a href="#">点击播放</a></p>
+                </li>
+                <li>
+                    <img src="images/top3.jpg" alt="">
+                    <h5>关爱公益</h5>
+                    <p class="djbf"><a href="#">点击播放</a></p>
+                </li>
+                <li>
+                    <img src="images/top4.jpg" alt="">
+                    <h5>中国象棋</h5>
+                    <p class="djbf"><a href="#">点击播放</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
 
 </body>
 
