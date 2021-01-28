@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 100px auto;
+            transition: all 0.51s linear 0s;
+            /* linear 线性
+            ease 减速
+            ease-in 加速
+            ease-out 减速
+            ease-in-out 先加速后减速 */
+            /* transition: 让哪些属性进行过度 过渡的持续时间 运动曲线 延迟时间; */
+        }
+
+        .box:hover {
+            width: 500px;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+</body>
+
+</html>

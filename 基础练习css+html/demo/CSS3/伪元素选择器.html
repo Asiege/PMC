@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style type="text/css">
+    div {
+        width: 400px;
+        height: 400px;
+        border: 1px solid red;
+    }
+
+    li {
+        display: block;
+        line-height: 50px;
+    }
+
+    span::before {
+        content: "这是前面";
+        /* E::before 设置在 元素E 前面（依据对象树的逻辑结构）的内容，配合content属性一起使用 */
+    }
+
+    span::after {
+        content: "这是后面";
+        /* E::after 设置在 元素E 后面（依据对象树的逻辑结构）的内容，配合content属性一起使用 */
+    }
+
+    /* li:first-child {
+        color: blue;
+    } */
+
+    li:first-child a:first-child {
+        color: royalblue;
+    }
+
+    /* E:first-child 匹配父元素的第一个子元素E。*/
+    li:last-child {
+        color: red;
+    }
+
+    /* E:last-child 匹配父元素的最后一个子元素E。*/
+
+    li::first-letter {
+        font-weight: bold;
+    }
+
+    li::first-line {
+        color: blue;
+    }
+</style>
+
+<body>
+    <span>这是span</span>
+
+
+    <div>
+        <ul>
+            <li><a href="#">111111</a></li>
+            <li>li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签li标签</li>
+            <li>33333</li>
+            <li>44444</li>
+            <li>55555</li>
+        </ul>
+    </div>
+</body>
+
+</html>

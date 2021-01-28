@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        div {
+            width: 200px;
+            height: 200px;
+            float: left;
+            border: 1px solid rgb(144, 12, 63);
+            margin: 20px;
+            text-align: center;
+            line-height: 100px;
+            color: #fff;
+            font-size: 50px;
+            background-color: rgb(100, 141, 26);
+        }
+
+        .box {
+
+            background: -webkit-linear-gradient(left, green, yellow);
+            background: -moz-linear-gradient(left, green, yellow);
+            background: -ms-linear-gradient(left, green, yellow);
+            background: -o-linear-gradient(left, green, yellow);
+            background: linear-gradient(left, green, yellow);
+            /* 
+            -webkit-: 谷歌 苹果
+            -moz-:火狐
+            -ms-：IE
+            -o-：欧朋 */
+        }
+
+        .box2 {
+
+            border-top-left-radius: 50px 120px;
+            border-top-right-radius: 60px 120px;
+            border-bottom-left-radius: 60px 120px;
+            border-bottom-right-radius: 60px 120px;
+            /* 参数解释：水平半径   垂直半径 */
+            border-radius: 60px/120px;
+            /* 参数：水平半径/垂直半径 */
+
+
+            /* 从左上开始，顺时针赋值。如果当前角没有值，取对角的值 */
+
+            border-radius: 20px 60px;
+
+            border-radius: 60px;
+            /* 简洁写法 */
+        }
+
+        .box3 {
+            border-radius: 20px 60px 100px 140px;
+        }
+
+        div:nth-child(4) {
+            border-radius: 100px/50px;
+
+        }
+
+        div:nth-child(5) {
+            border-radius: 100% 0% 0% 0%;
+        }
+
+        div:nth-child(6) {
+            border-radius: 0 100px;
+        }
+
+        div:nth-child(7) {
+            box-shadow: 15px 21px 48px -2px #666;
+            /* box-shadow: 水平偏移 垂直偏移 模糊程度 阴影大小 阴影颜色 外阴影/内阴影，可不写 */
+        }
+
+        div:nth-child(8) {
+            box-shadow: 3px -3px 3px 3px #666 inset;
+        }
+
+        div:nth-child(9) {
+            /* 边框图片的路径*/
+            border-image-source: url(../../image/border.png);
+
+            /* 图片边框的裁剪*/
+            border-image-slice: 30;
+
+            /*图片边框的宽度*/
+            border-image-width: 30;
+
+            /*边框图片的平铺*/
+            /* repeat :正常平铺 但是可能会显示不完整*/
+            /*round: 平铺 但是保证 图片完整*/
+            /*stretch: 拉伸显示*/
+            border-image-repeat: repeat;
+
+            /* 可综合属性写法 */
+            /* border-image:url(border.png) 30 30 round;*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div></div>
+    <div>9</div>
+</body>
+
+</html>
