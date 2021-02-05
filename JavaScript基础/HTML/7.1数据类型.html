@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 表示“获取变量的数据类型”，返回的是小写，语法为：（两种写法都可以）
+        var a = "12"
+        console.log(typeof (a));
+        // 显示类型转换Number()
+        console.log(Number(a));
+
+        /*
+        parseInt()
+        1,只保留字符串最开头的数字
+        2.如果对非 String使用 parseInt()或 parseFloat()，
+        它会先将其转换为 String 然后再操作
+        3.自动带有截断小数的功能：取整，不四舍五入。
+        */
+        var b = parseInt(5.8) + parseInt(4.7);
+        console.log(a);
+
+        // 4.带两个参数时，表示在转换时，包含了进制转换。
+        var num = parseInt(a, 16);
+        console.log(num)
+
+        // parseFloat()函数：字符串 --> 浮点数（小数）
+        // 将字符串转换为浮点数
+        var a = '123.456.789px';
+        console.log(parseFloat(a))
+
+        // Boolean():转换为 Boolean
+        /*
+        情况一：数字 --> 布尔。除了 0 和 NaN，其余的都是 true。也就是说，Boolean(NaN)的结果是 false。
+
+        情况二：字符串 —> 布尔。除了空串，其余的都是 true。全是空格的字符串，转换结果也是 true。字符串'0'的转换结果也是 true。
+
+        情况三：null 和 undefined 都会转换为 false。
+
+        情况四：引用数据类型会转换为 true。注意，空数组[]和空对象{}，转换结果也是 true，这个一点，很多人都不知道。 */
+
+        // 隐式转换为 Boolean 类型：
+        console.log(1 == true)
+    </script>
+</body>
+
+</html>

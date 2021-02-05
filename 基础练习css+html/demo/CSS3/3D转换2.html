@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>3d</title>
+    <style>
+        body {
+            perspective: 500px;
+        }
+
+        div {
+            width: 300px;
+            height: 226px;
+            margin: 20px auto;
+            background: green;
+            transition: all 1s;
+        }
+
+        .rotateX:hover {
+            transform: translateX(100px);
+        }
+
+        .rotateY:hover {
+            transform: translateY(100px);
+        }
+
+        .rotateZ:hover {
+            /* translateZ必须配合透视来使用*/
+            transform: translateZ(100px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotateX"> </div>
+    <div class="rotateY"> </div>
+    <div class="rotateZ"> </div>
+</body>
+
+</html>

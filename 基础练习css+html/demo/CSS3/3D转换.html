@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>3d</title>
+    <style>
+        /* 
+        transform: rotateX(360deg); //绕 X 轴旋转360度
+
+        transform: rotateY(360deg); //绕 Y 轴旋转360度
+
+        transform: rotateZ(360deg); //绕 Z 轴旋转360度 
+        */
+
+        .rotateX {
+            width: 300px;
+            height: 226px;
+            margin: 200px auto;
+            /* 透视 :加给变换的父盒子*/
+            /* 设置的是用户的眼睛距离 平面的距离*/
+            /* 透视效果只是视觉上的呈现，并不是正真的3d*/
+            /* perspective: 110px; */
+        }
+
+        div img:nth-child(1) {
+            /* 过渡*/
+            transition: transform 2s;
+        }
+
+        /* 所有的3d旋转，对着正方向去看，都是顺时针旋转*/
+        /* .rotateX:hover img {
+            transform: rotateY(180deg);
+        } */
+
+        /* .rotateX:hover img {
+            transform: rotateX(180deg);
+        } */
+        .rotateX:hover img {
+            transform: rotateX(180deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="rotateX">
+        <img src="../../image/手机.jpg" alt="" />
+    </div>
+</body>
+
+</html>

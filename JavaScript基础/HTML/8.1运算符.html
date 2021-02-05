@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        // 一元运算符，因为后面只跟一个操作数。
+        // typeof；
+        var a = '123';
+        console.log(typeof a);
+        // +：正号
+        var b = true;
+        b = +b;
+        console.log('b：' + b);
+        // -：负号，符号可以对数字进行取反
+        var c = '123';
+        c = -c;
+        console.log(c);
+
+
+        // 逻辑运算符
+        /*
+        && 与（且）：两个都为真，结果才为真。
+
+        || 或：只要有一个是真，结果就是真。
+
+        ! 非：对一个布尔值进行取反。
+        */
+
+
+        // 短路运算的妙用
+
+        /* 
+        JS中的&&属于短路的与：
+
+        2.如果第一个值为false，则不会执行后面的内容。
+
+        1.如果第一个值为 true，则继续执行第二条语句，并返回第二个值。 
+        */
+        const a1 = 'qianguyihao';
+        //第一个值为true，会继续执行后面的内容
+        a1 && alert('看a1会不会出来');
+
+        const a2 = undefined;
+        //第一个值为false，不会继续执行后面的内容
+        a2 && alert('看a2会不会出来');
+
+        /*
+        JS中的||属于短路的或：
+
+        1.如果第一个值为true，则不会执行后面的内容。
+
+        2.如果第一个值为 false，则继续执行第二条语句，并返回第二个值。
+        */
+
+        /* const result;
+        let errorMsg = '';
+
+        if (result && result.retCode != 0) {
+            // 接口返回异常码时
+            errorMsg = result.msg || '活动太火爆，请稍后再试';
+        }
+
+        if (!result) {
+            // 接口挂掉时
+            errorMsg = '网路异常，请稍后再试.';
+        } */
+
+
+        // 比较运算符
+
+        /*
+        >	大于号
+        <	小于号
+        >= 	大于或等于
+        <=  小于或等于
+        == 	等于
+        === 全等于
+        !=	不等于
+        !== 不全等于
+        比较运算符，得到的结果都是布尔值：要么是true，要么是false。
+        */
+        console.log(1 > true); //false
+        // 对于非数值进行比较时，会将其转换为数字然后再比较。
+        //任何值和NaN做任何比较都是false
+
+        // 如果符号两侧的值都是字符串时，不会将其转换为数字进行比较。
+        // 比较两个字符串时，比较的是字符串的Unicode编码
+
+        // 当我们在比较两个字符串型的数字时，一定一定要先转型再比较大小，
+        // 比如 parseInt()
+
+
+
+        // ==这个符号，它是判断是否等于
+        // 做隐式转换，将不同的数据类型，转为相同类型进行比较
+        console.log("我爱你中国" == "我爱你中国");	// 输出结果为true
+
+        // ===全等符号的强调
+
+        // 全等在比较时，不会做类型转换。
+        // 如果要保证绝对等于（完全等于），我们就要用三个等号===
+        console.log("6" === 6);	//false
+
+    </script>
+</body>
+
+</html>

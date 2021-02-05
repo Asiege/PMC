@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var a = 'abc';
+        // isNaN() 函数
+        // 判断指定的参数是否为 NaN（非数字类型），返回结果为 Boolean 类型。
+        // 也就是说：任何不能被转换为数值的参数，都会让这个函数返回 true。
+
+        console.log(isNaN("123"));
+        console.log(isNaN(a));
+        console.log(isNaN(null));
+        // ++,--,自增，自减。
+
+        var b = 2
+        b++;
+        console.log(typeof a);
+        console.log(a);
+
+
+        /* 加号：+
+        情况一：字符串 + 数字
+
+        当加号的两边，只要有一个是字符串的时候，就会调用 String() 函数将数字转为字符串，然后再计算。导致最终的运算结果是字符串。
+        情况二：Boolean + 数字
+
+        Boolean 型和数字型相加时， true 按 1 来算 ，false 按 0 来算。这里其实是先调 Number() 函数，将 Boolean 类型转换为 Number类型，然后再和 数字相加。
+        情况三： null + 数字
+
+        等价于：0 + 数字
+        情况四： undefined + 数字
+        计算结果：NaN */
+
+
+        // 运算符 -、*、/
+
+        /* 1任何非 Number 类型的值做-、*、/运算时，会将这些值转换为Number然后再运算(内部调用的是 Number() 函数），
+        运算结果是 Number 类型。（注：任何值 + 字符串是特例，运算结果是字符串） */
+
+        // 任何的值和字符串做加法运算，都会先转换为字符串，然后再做拼串操作。
+
+        // 任何值和NaN做运算的结果都是NaN。
+    </script>
+</body>
+
+</html>

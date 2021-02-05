@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 1000px;
+        margin: 50px auto;
+    }
+
+    .box div {
+        width: 300px;
+        height: 150px;
+        background-color: red;
+        float: left;
+        margin-top: 50px;
+        margin-right: 20px;
+        color: white;
+        text-align: center;
+        font: 400px 30px/150px "微软雅黑";
+    }
+
+    .box .box1:hover {
+        background-color: yellow;
+        transform: scale(2, 2);
+        /* 	缩放：transform: scale(x, y) 
+            写一个值就是等比例缩放
+            大于1表示放大，小于1表示缩小。不能为百分比 */
+    }
+
+    .box .bos {
+        background-color: rgb(36, 36, 36);
+        transition: all 1s;
+    }
+
+    .box .box2:hover {
+        background-color: blue;
+        transform: translate(10%, 10%);
+        /* 	transform: translate(水平位移, 垂直位移);
+            参数为百分比，相对自身移动
+            正值：向右和向下。 负值：向左和向上。如果只写一个值，则表示水平移动 */
+    }
+
+    .box .box3:hover {
+        background-color: blueviolet;
+        transform: rotate(405deg);
+    }
+
+    /*  transform-origin: 水平坐标 垂直坐标;
+
+	    transform-origin: 50px 50px;
+
+	    transform-origin: center bottom;   
+        //旋转时，以盒子底部的中心为坐标原点 */
+
+    .bos2 {
+        transition: all 1s;
+        transform-origin: left top;
+        box-shadow: 0 0 3px 0 #666;
+    }
+
+    .box .box4:hover {
+        transform: rotate(-20deg)
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="bos box1">1</div>
+        <div class="bos box2">2</div>
+        <div class="bos box3">3</div>
+        <div class="bos2 box4">4</div>
+        <div class="bos box5">5</div>
+    </div>
+</body>
+
+</html>

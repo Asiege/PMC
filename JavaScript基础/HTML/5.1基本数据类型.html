@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://cdn.bootcdn.net/ajax/libs/decimal.js/10.2.0/decimal.min.js"></script>
+    <script type="text/javascript">
+        var a = "2" + 3 - 4;
+        // 隐式转换
+        console.log(a);
+        // 通过 cdn 的方式引入 decimal.js
+        console.log('加法：');
+        var a = 0.1;
+        var b = 0.2;
+        console.log(a + b);
+        console.log(new Decimal(a).add(new Decimal(b)).toNumber());
+    </script>
+</body>
+
+</html>
