@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = 'abcdefg';
+        // 包左不包右
+        console.log(name.slice(2, 5));
+
+        //不能接受负值作为参数
+        //如果第二个参数小于第一个，则自动交换
+        console.log(name.substring(2, 5));
+
+        //这个方法的第二个参数截取的长度
+        //不建议使用它
+        console.log(name.substr(2, 4));
+
+        //根据字符的 Unicode 编码获取字符
+        var result1 = String.fromCharCode(20013);
+        console.log(result1);
+
+        // 字符串的连接
+        var str1 = 'abcd'
+        var str2 = 'efgh'
+        var resilt2 = str1.concat(str2);
+        console.log(resilt2);
+
+        // 字符串转换为数组
+        // 举例1
+        var str3 = 'ni,shi,shui';
+        var array = str3.split(',');
+        console.log(array);
+        // 举例2
+        var str4 = 'ni|hao|ma';
+
+        console.log('结果1' + str4.split());
+
+        console.log(str4.split(''));
+
+        console.log(str4.split('|'));
+
+        console.log(str4.split('a'));
+
+        // 将字符串中的指定内容，替换为新的内容并返回。不会修改原字符串。
+        // 新的字符串 = str.replace(被替换的字符，新的字符);
+        var str5 = 'Today is fine day,today is fine day!';
+        console.log(str5);
+
+        console.log(str5.replace('today', 'tomorrow'));
+        console.log(str5.replace(/today/gi, 'tomorrow'));//这里用到了正则，才能替换所有的today
+
+        // 将字符串重复指定的次数。会返回新的值，不会修改原字符串。
+        // 举例1
+        const name2 = 'qiangguyihao';
+        console.log(name2.repeat(2));
+        // 举例2,模糊字符串的后四位
+        const telephone = '13088889999';
+        const mix_telephone = telephone.slice(0, -4) + '*'.repeat(4);
+
+        console.log(telephone);
+        console.log(mix_telephone);
+
+        // 去除字符串前后的空白。
+        let str6 = '     a    b   c    ';
+        console.log(str6.trim());
+
+        //大小写转换
+        var str7 = 'abcdEFG';
+        // 转换小写
+        console.log(str7.toLowerCase());
+        // 转换大写
+        console.log(str7.toUpperCase());
+
+        // html 方法
+        var str8 = '你好';
+
+        console.log(str8.anchor());
+        console.log(str8.big());
+        console.log(str8.sub());
+        console.log(str8.sup());
+        console.log(str8.link('http://www.baidu.com'));
+        console.log(str8.bold());
+    </script>
+</body>
+
+</html>

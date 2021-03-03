@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 3.456;
+        let num2 = num.toFixed(2);
+
+        console.log(num);
+        console.log(num2);
+
+        console.log(typeof num);
+        console.log(typeof num2);
+
+        console.log('---------');
+
+        var num3 = -0.6;
+
+        console.log(Math.abs(num3));    //取绝对值
+        console.log(Math.floor(num3));  //向下取整
+        console.log(Math.ceil(num3));   //向上取整
+        console.log(Math.round(num3));  //四舍五入取整
+        console.log(Math.random(num3)); //生成0-1之间的随机数
+        console.log(Math.PI);           //生成圆周率
+        console.log(Math.max(1, 2, 3)); //返回最大值
+        console.log(Math.min(1, 2, 3)); //返回最小值
+
+        console.log('----------');
+
+        // 生成 [0, x) 之间的随机数
+        console.log(Math.round(Math.random(num3) * 2));
+
+        //生成x，y，之间的随机数
+        console.log(Math.round(Math.random(num3) * (2 - 4) + 4));
+
+        /* 
+        *生成两个整数之间的随机整数，并且要包含这两个整数
+        */
+
+        function getRandom(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        console.log(getRandom(1, 10));
+
+        const arr = ['许嵩', '邓紫棋', '毛不易', '周杰伦'];
+        const index = getRandom(0, arr.length - 1); // 生成随机的index
+        console.log(arr[index]);
+        console.log(arr);
+        console.log(index);
+        console.log(arr.length - 1);
+
+        console.log('-----------');
+
+        let a = Math.pow(3, Math.pow(2, 2));
+        console.log(a);
+
+        //编码和解码
+
+        encodeURIComponent();//把字符串作为 URI 组件进行编码
+        decodeURIComponent();//把字符串作为 URI 组件进行解码
+
+        let url = "http://www.baidu.com";
+
+        let str = encodeURIComponent(url);
+
+        console.log(str);//打印url的编码
+        console.log(decodeURIComponent(str));//对url进行编码后，再解码，还原为url
+    </script>
+</body>
+
+</html>

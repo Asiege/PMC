@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var num = prompt('请输入一个大于1的整数')
+        if (num <= 1) {
+            //检测用户输入的值是不是合法
+            alert('该值不合法');
+        } else {
+            // 先用flag，来保存当前数的状态
+            var flag = true;
+            // 判断num是否质数
+            // 获取2-num之间的数
+            for (var i = 2; i < num; i++) {
+                // console.log(i);
+                // 判断num是否能被i整除
+                if (num % i == 0) {
+                    // 一旦发现:如果num能被i整除,说明num一定不是质数
+                    // 此时:设置flag为false,然后跳出for循环
+                    flag = false;
+                    break;
+                }
+            }
+        }
+
+        if (flag) {
+            alert(num + '是质数！！！');
+        } else {
+            alert('这个不是质数');
+        }
+    </script>
+</body>
+
+</html>

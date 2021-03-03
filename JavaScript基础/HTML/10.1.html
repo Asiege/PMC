@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <output>OUTPUT标签</output>
+
+    <script type="text/javascript">
+        var a = "11";
+
+        for (var i = 1; i < 13; i++) {
+            console.log(i);
+        }
+
+        // 题目一
+        for (var i = 1; i < 10; i = i + 3) {
+            i++;
+            console.log(i);
+        }
+        // 题目二
+        for (var i = 10; i <= 10; i++) { }
+        console.log(i);
+
+        // while循环
+
+        // 题目：假如投资的年利率为5%，从1000块增长到5000块，需要多少年
+
+        var i = 1000;
+        var count = 0;
+
+        do {
+            i *= 1.05;
+            count++;
+        } while (i < 5000);
+
+        console.log(i);
+        console.log(count);
+
+        //break ：用于退出switch语句或退出整个循环语句不包括 for，while不包括if
+        //break 会立即终止离他最近的那个循环语句
+
+        //举例1
+        for (var i = 0; i > 10; i++) {
+            count.log(i);
+        }
+    </script>
+</body>
+
+</html>

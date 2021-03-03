@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const name = 'abcdefg'
+
+        // 取字符串中指定内容的索引
+        console.log(name.search('f'));
+        console.log(name.search(/d/));
+
+        // 字符串中是否包含指定的内容
+        console.log(name.includes('e'));
+        console.log(name.includes('c', 3))
+
+        // 字符串是否以指定的内容开头
+        console.log(name.startsWith('a'));
+        console.log(name.startsWith('d', 3));
+
+        //字符串是否以指定的内容结尾
+        console.log(name.endsWith('g'));
+    </script>
+</body>
+
+</html>

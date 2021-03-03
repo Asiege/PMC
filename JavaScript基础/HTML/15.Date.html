@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let date1 = new Date();
+
+        console.log(date1);
+        console.log(typeof date1);
+        console.log('-----1-----');
+
+        //参数是字符串是多少
+        const date11 = new Date('2021/02/17');
+        console.log(date11);
+
+        const date12 = new Date('2020/04/19');
+        console.log(date12);
+
+        const date13 = new Date('2020-05-20');
+        console.log(date13);
+
+        const date14 = new Date('Wed Jan 27 2017 12:00:00 GMT+0800(中国标准时间)');
+        console.log(date14);
+        console.log('-----2-----');
+
+        //参数为数字
+        const date21 = new Date(2020, 2, 18);
+        console.log(date21);
+
+        const date22 = new Date(2020, 3, 18, 22, 59, 58);
+        console.log(date22);
+
+        const params = [2020, 06, 12, 16, 20, 59];
+        const date23 = new Date(...params);
+        console.log(date23);
+        console.log('-----3-----');
+
+        //参数是时间戳
+        const date31 = new Date(1591950413388);
+        console.log(date31);
+
+        // 先把时间对象转换成时间戳，然后把时间戳转换成时间对象
+        const timestamp = new Date().getTime();
+        const date32 = new Date(timestamp);
+        console.log(date32);
+
+        console.log('---------');
+
+        //日期的格式化
+        var myDate = new Date();//2021.2.17
+
+        console.log(myDate);
+
+        console.log(myDate.getFullYear());//获取年份
+        console.log(myDate.getMonth() + 1);//获取月
+        console.log(myDate.getDate());//获取日
+
+        var dayArr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+
+        console.log(myDate.getDay());//获取星期数字
+        console.log(dayArr[myDate.getDay()]);
+
+        console.log(myDate.getHours());//小时
+        console.log(myDate.getMinutes());//分钟
+        console.log(myDate.getSeconds());//秒
+        console.log(myDate.getMilliseconds());//毫秒
+
+        console.log(myDate.getTime());
+    </script>
+</body>
+
+</html>

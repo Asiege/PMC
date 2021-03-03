@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <script>
+        var arr = [1, 2, 3, 4, 5, 6];
+        //判断是否为数组
+        console.log(Array.isArray(arr));
+
+        //数组转换为字符串
+        console.log(arr.toString());
+
+        //其他转换为字符串
+        var string1 = '';
+        string1 = String(arr);
+        console.log(string1)
+
+
+        {
+            //将name元素从伪数组转换真数组
+            const name = 'qianguyihao';
+
+
+            console.log(Array.from(name));
+
+            let btnArray = document.getElementsByTagName('button');
+
+            console.log(btnArray);
+            console.log(btnArray[0]);  //伪数组
+
+            console.log('-------------------')
+            //用forEach（function（））方法输出数组
+            //使用Array.from将伪数组变成真数组
+            Array.from(btnArray).forEach(function (item, index) {
+                console.log(item);
+            })
+        }
+
+        //创建数组
+
+        const arr4 = Array.of(1, 'abc', true);
+        console.log(arr4);
+        //new Array()和 Array.of()的区别在于：当参数只有一个时，前者表示数组的长度，后者表示数组中的内容
+
+
+        //push():向数组的最后面插入一个或者多个元素，返回结果为新数组的长度，会改变原数组。
+        const arr2 = ['王一', '王二', '王三'];
+
+        var result1 = arr.push('王四');
+        var result2 = arr.push('王五', '王六');
+
+        console.log(result1);
+        console.log(result2);
+        console.log(JSON.stringify(arr2));
+
+
+        //pop 删除数组中的最后一个元素，返回结果为被删除的元素。
+        var arr3 = ['王一', '王二', '王三'];
+
+        var result1 = arr3.pop();
+        //返回被删除的元素
+        console.log(result1);
+        console.log(JSON.stringify(arr3));
+
+
+        //unshift()：在数组最前面插入一个或多个元素，返回结果为新数组的长度。
+        //会改变原数组，因为原数组变成了新数组。插入元素后，其他元素的索引会依次调整。
+        var arr5 = ['王一', '王二', '王三'];
+
+        var result1 = arr5.unshift('王四');
+        var result2 = arr5.unshift('王五', '王六');
+
+        console.log(JSON.stringify(arr5))
+
+        {
+            // slice()：从数组中提取指定的一个或者多个元素，返回结果为新的数组
+            const arr6 = ['A', 'B', 'C', 'D', 'E', 'F'];
+
+            const result3 = arr6.slice();//无参数，则获取所有
+            const result4 = arr6.slice(2);//从第二个值开始获取
+            const result5 = arr6.slice(-2);//获取最后两个元素
+            const result6 = arr6.slice(2, 4);//提取从第二个到第四个之间的元素（不包括第四个）
+            const result7 = arr6.slice(4, 2);//空
+
+            console.log('arr:' + JSON.stringify(arr6));
+            console.log('result3:' + JSON.stringify(result3));
+            console.log('result4:' + JSON.stringify(result4));
+            console.log('result5:' + JSON.stringify(result5));
+            console.log('result6:' + JSON.stringify(result6));
+            console.log('result7:' + JSON.stringify(result7));
+
+            //学习splice()从数组中删除指定的一个或多个元素，返回结果为被删除元素组成的新数组
+        }
+        var arr7 = ['A', 'B', 'C', 'D', 'E', 'F'];
+        var result8 = arr7.splice(1);
+
+        console.log('arr7:' + JSON.stringify(arr7));
+        console.log('result8:' + JSON.stringify(result8));
+
+    </script>
+
+</body>
+
+</html>

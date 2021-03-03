@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body {
+            width: 2000px;
+        }
+
+        span {
+            display: inline-block;
+            width: 80px;
+            border: 1px solid red;
+        }
+    </style>
+
+    <script type="text/javascript">
+        //创建外层循环，用来控制乘法表的高度
+        for (var i = 1; i <= 9; i++) {
+            for (var j = 1; j <= i; j++) {
+                //创建一个内层循环来控制图形的宽度
+                document.write('<span>' + j + '*' + i + '=' + i * j + '</span>');
+            }
+            //输出一个换行
+            document.write('<br />');
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

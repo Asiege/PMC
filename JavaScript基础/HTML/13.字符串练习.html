@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 练习1
+        const name = 'smyhvaevaesmyh';
+        var num = 0;
+        for (var i = 0; i < name.length; i++) {
+            if (name.charAt(i) === 'm') {
+                console.log(i);
+            }
+        }
+
+
+        //练习2
+        var str2 = 'smyhvaevaesmyhvae';
+        //定义一个json，然后判断json中是够有该属性，如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
+        var json = {};
+        for (var i = 0; i < str2.length; i++) {
+            //判断：如果有该属性，那么值+1;否则创建一个该属性，并赋值为1；
+            var key = str2.charAt(i);
+            if (json[key] === undefined) {
+                json[key] = 1;
+            } else {
+                json[key] += 1;
+            }
+        }
+        console.log(json);
+        console.log('----------------');
+
+        //获取json中属性值最大的选项
+        var maxKey = '';
+        var maxValue = 0;
+        for (var k in json) {
+            if (json[k] > maxValue) {
+                //        if(maxKey == ""){
+                //            maxKey = k;
+                //            maxValue = json[k];
+                //        }else{
+                maxKey = k;
+                maxValue = json[k];
+            }
+        }
+        console.log(maxKey);
+        console.log(maxValue);
+
+    </script>
+</body>
+
+</html>

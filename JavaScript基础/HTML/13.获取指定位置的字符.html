@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = new String('smyhvae');
+
+        for (var i = 0; i < str.length; i++) {
+            console.log(str.charAt(i));
+        }
+
+        var str = 'I love my country！我爱你中国！'
+
+        //需求：求一个字符串占有几个字符位。
+        //思路；如果是英文，站一个字符位，如果不是英文占两个字符位。
+        //技术点：判断该字符是否在0-127之间。（在的话是英文，不在是非英文）
+
+        alert(getZFWlength(str));
+        alert(str.length);
+
+        //定义方法：字位符
+        function getZFWlength(string) {
+            var count = 0;
+            for (var i = 0; i < string.length; i++) {
+                if (string.charCodeAt(i) < 128 && string.charCodeAt(i) >= 0) {
+                    count++
+                } else {
+                    count += 2;
+                }
+            }
+            return count;
+        }
+    </script>
+
+</body>
+
+</html>
