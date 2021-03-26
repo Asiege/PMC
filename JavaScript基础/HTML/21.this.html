@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function fun() {
+            console.log(this);
+            console.log(this.name);
+        }
+
+        var obj1 = {
+            name: 'smyh',
+            sayName: fun,
+        };
+
+        var obj2 = {
+            name: 'vae',
+            sayName: fun,
+        };
+
+        var name = '全局的name';
+
+        fun();
+
+        console.log('-------');
+
+        function fun2() {
+            console.log(this);
+            console.log(this.name);
+        }
+
+        var obj3 = {
+            name: 'smyh2',
+            sayName: fun2,
+        };
+
+        var obj4 = {
+            name: 'vae2',
+            sayName: fun2,
+        };
+
+        var name = '全局的name属性';
+
+        obj3.sayName();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>{
+            //重要
+            let dataList = [
+                //sort 方法举例：将数组从小到大排序
+                {
+                    title: '1',
+                    publishTime: 200,
+                },
+                {
+                    title: '2',
+                    publishTime: 100,
+                },
+                {
+                    title: '3',
+                    publishTime: 300,
+                },
+            ];
+
+            console.log('qianguyhao 排序前的数组：' + JSON.stringify(dataList));
+
+            dataList.sort((a, b) => parseInt(a.publishTime) - parseInt(b.publishTime));
+
+            console.log('qianguyihao 排序后' + JSON.stringify(dataList));
+        }
+
+        console.log('-----------------');
+
+        //includes()判断一个数组中是否包含指定的元素。如果是，则会返回 true；否则返回 false。
+        const arr = [11, 12, 13, 14, 15];
+        console.log(arr.includes(12));
+        console.log(arr.includes(11, 1));
+
+        // find()作用：找出第一个满足「指定条件返回 true」的元素；如果没找到，则返回 undefined。
+        let result = arr.find((item, index) => {
+            return item > 4;
+        });
+
+        console.log(result);
+
+        // findlndex()作用：找出第一个满足「指定条件返回 true」的元素的 index。
+        let result1 = arr.findIndex((item, index) => {
+            return item > 14;
+        });
+        console.log(result1);
+
+
+        // every()对数组中每一项运行回调函数，如果都返回 true，every 就返回 true；如果有一项返回 false，则停止遍历，此方法返回 false。
+        var arr1 = ['千古', '宿敌', '南山忆', '素颜'];
+        var bool1 = arr1.every(function (element, index, array) {
+            if (element.length > 2) {
+                return false;
+            }
+            return true;
+        });
+
+        console.log(bool1);//超过2给字符，返回false，不超过则返回true，
+
+
+        //some()：对数组中每一个元素运行回调函数，只要有一个元素返回 true，则停止遍历，此方法返回 true。
+        var bool1 = arr1.some(function (element, index, array) {
+            if (element.length > 2) {
+                return false;
+            }
+            return true;
+        });
+
+        console.log(bool1);
+
+        //valueOf()：返回数组本身
+
+        //概念：数组的遍历
+        const array = ['千古', '宿敌', '南山忆', '素颜'];
+        for (let i = 0; i < array.length; i++) {
+            // element = array[i];
+            console.log(array[i]);
+            // console.log(element);
+
+        }
+        console.log(JSON.stringify(array));
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*  const obj1 = {
+             nickName: 'qianguyihao',
+             age: 28,
+         };
+         function fn1() {
+             console.log(this);
+             console.log(this.nackName);
+         }
+ 
+         fn1.call(this); *///无法指向
+
+        const obj1 = {
+            nackName: 'qianguyihao',
+            age: 28,
+        };
+        function fn1(a, b) {
+            console.log(this);
+            console.log(this.nackName);
+            console.log(a + b);
+        }
+        fn1.call(obj1, 2, 4);
+        // 通过 call() 改变 this 指向：
+
+        console.log('--------');
+
+        function Father(myName, myAge) {
+            this.name = myName;
+            this.age = myAge;
+        }
+        function Son(myName, myAge) {
+            Father.call(this, myName, myAge);
+        }
+        const son1 = new Son('wei', 28);
+        console.log(JSON.stringify(son1));
+
+        console.log('--------');
+
+        // 给 Father 增加 name 和 age 属性
+        function Father1(myName, myAge) {
+            this.name2 = myName;
+            this.age2 = myAge;
+        }
+
+        function Son1(myName, myAge) {
+            // 【下面这一行，重要代码】
+            // 通过这一步，将 father 里面的 this 修改为 Son 里面的 this；另外，给 Son 加上相应的参数，让 Son 自动拥有 Father 里的属性。最终实现继承
+            Father1.call(this, myName, myAge);
+        }
+
+        const son2 = new Son1('千古壹号', 28);
+        console.log(JSON.stringify(son2));
+
+    </script>
+</body>
+
+</html>

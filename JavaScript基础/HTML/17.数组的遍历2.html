@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* let arr1 = [1, 2, 3, 4, 5, 6];
+
+        arr1.reduce((prev, item) => {
+            console.log(prev);
+            console.log(item);
+            console.log('--------');
+            return 88;
+        }, 0); */
+
+        const arr = [2, 4, 0, 2, 5, 22];
+
+        const total = arr.reduce((prev, item) => {
+            return prev + item;
+        })
+        console.log('total的总和：' + total);
+
+        // 定义方法：统一 value 这个元素在数组 arr 中出现的次数
+        function repeatCount(arr, value) {
+            if (!arr || arr.length == 0) return 0;
+
+            return arr.reduce((totalCount, item) => {
+                totalCount += item == value ? 1 : 0;
+                return totalCount;
+            }, 0);
+
+        }
+
+        console.log(repeatCount(arr, 2));
+
+
+        // 数组求最大值
+        const maxValue = arr.reduce((prev, item) => {
+            return prev > item ? prev : item;
+        });
+        console.log(maxValue);
+
+        //去除数组中重复的数字
+        //1.获取数组中的每一个元素
+        for (let i = 0; i < arr.length; i++) {
+            // const element = array[i];
+            /*获取当前元素后的所有元素*/
+            for (let j = i + 1; j < arr.length; j++) {
+                // const element = array[j];
+                if (arr[i] == arr[j]) {
+                    arr.splice(j, 1);
+                }
+                j++;
+            }
+        }
+        console.log(arr.length);
+        console.log(arr);
+
+        console.log('---------');
+
+        //清空数组
+        var array = [1, 2, 3, 4, 5];
+        array = [];
+        console.log(array);
+
+        // 将一个字符串数组输出为|分割的形式，比如“千古|宿敌|素颜”。使用两种方式实现。
+        var arr2 = [1, 2, 3];
+        console.log(arr.join('|'));
+
+
+        // reverse练习
+        // 题目：将一个字符串数组的元素的顺序进行反转，使用两种种方式实现。提示：第 i 个和第 length-i-1 个进行交换。
+        function revese(array) {
+            var newArr = [];
+            for (let i = array.length - 1; i >= 0; i--) {
+                newArr[newArr.length] = array[i];
+
+            }
+            return newArr;
+        }
+
+        var ziFu = ['1', '2', '3'];
+        var ziFu2 = ['1', '2', '3', '4'];
+        console.log(ziFu.length);
+        console.log(JSON.stringify(revese(ziFu)));
+
+        function reverse2(array) {
+            for (let i = 0; i < array.length / 2; i++) {
+                // const element = array[i];
+                var temp = array[i];
+                array[i] = array[array.length - 1 - i];
+                array[array.length - 1 - i] = temp;
+            }
+            return array;
+        };
+
+        console.log(JSON.stringify(reverse2(ziFu2)));
+        var arr3 = ['1', '2', '3'];
+        var arr4 = revese(arr3);
+        //自带方法
+        console.log(JSON.stringify(arr4));
+
+        var arr5 = ['1', '2', '3', '4', '5', '3', '4', '5'];
+
+        console.log(arr5);
+
+        var aaa = fn(arr5);
+        console.log(aaa);
+
+        function fn(array) {
+            var newArr = [];
+            for (let i = 0; i < array.length; i++) {
+                // const element = array[i];
+                var bool = true;
+
+                for (let j = 0; j < newArr.length; j++) {
+                    // const element = array[j];
+                    if (array[i] === newArr[j]) {
+                        bool = false;
+                    }
+
+                }
+                if (bool) {
+                    newArr[newArr.length] = array[i];
+                }
+            }
+            return newArr;
+        }
+
+    </script>
+</body>
+
+</html>
