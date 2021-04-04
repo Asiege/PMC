@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Object.freeze() 冻结对象
+        const params = {
+            name: 'wei',
+            port: '1122',
+        }
+
+        Object.freeze(params);
+        //无法修改属性
+        params.port = '800000';
+    </script>
+</body>
+
+</html>

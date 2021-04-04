@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var obj = new Object();
+        obj['123'] = 789;
+        console.log(obj['123']);
+
+        obj['123'] = 123456;
+        console.log(obj['123']);
+
+        delete obj['123'];
+        console.log(obj['123']);
+
+        var obj2 = new Object();
+
+        obj2.name = 'wei'
+
+        console.log(name in obj2);
+
+        var arr = [0, 1, 2, 3, 4, 5];
+
+        var result = (4 in arr);
+
+        document.write(result);
+        console.log(result);
+
+        //for of：遍历数组
+
+        let arr1 = [2, 6, 8, 6];
+
+        for (let value of arr1) {
+            console.log(value);
+        }
+        //建议大家在以后的工作中使用 for…of 遍历数组。
+
+        console.log('----1----');
+
+        const obj3 = {
+            name: 'wei',
+            age: 23,
+            address: 'shenzhen',
+            gender: 'man',
+            sayHi: function () {
+                console.log(this.name);
+            },
+        };
+
+        for (const key in obj3) {
+            console.log('属性：' + key);
+            console.log('属性：' + obj3[key]);
+            console.log('------');
+        };
+
+        for (const key in arr1) {
+            console.log('属性：' + key);
+            console.log('属性：' + arr1[key]);
+            console.log('------');
+        };
+
+    </script>
+</body>
+
+</html>

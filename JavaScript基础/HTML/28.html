@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        //实现浅拷贝
+        const obj1 = {
+            name: 'wei',
+            age: 23,
+            info: {
+                desc: 'good',
+            },
+        };
+
+        const obj2 = {};
+
+        for (let key in obj1) {
+            obj2[key] = obj1[key];
+        };
+
+        console.log('obj2' + JSON.stringify(obj2));
+
+        obj1.info.desc = '永不止步';
+
+        console.log('obj2:' + JSON.stringify(obj2));
+
+        console.log('-----------')
+
+        //以上代码不推荐
+
+        //Object.assign();
+
+        const obj3 = {
+            name: 'wei',
+            age: 23,
+            info: {
+                desc: '你好',
+            },
+        };
+
+        const obj4 = Object.assign({}, obj3);
+
+        console.log('obj3:' + JSON.stringify(obj4));
+
+        obj3.info.desc = 'nihao';
+        console.log('obj2:' + JSON.stringify(obj4));
+
+        //例2
+
+        const myObj = {
+            name: 'wei',
+            age: 28,
+        }
+        //第一种
+        const myobj1 = {};
+        Object.assign(obj1, myObj);
+        //第二种
+        const myobj2 = Object.assign({}, myObj);
+        //第三种
+        const obj31 = {};
+        const obj32 = Object.assign(obj31, myObj);
+
+        console.log('-------');
+
+        const myBox1 = {
+            name: 'wei',
+            age: 28,
+        }
+
+        const myBox2 = {
+            name: '伟',
+            age: 23,
+            desc: 'hello world'
+        }
+
+        Object.assign(myBox1, myBox2);
+
+        console.log(JSON.stringify(myBox1));
+
+        //以上是浅拷贝练习
+        console.log('--------');
+        //下面是深拷贝
+
+        let obj01 = {
+            name: 'wei0',
+            age: 23,
+            info: {
+                desc: 'hello',
+            },
+            color: ['red', 'blue', 'green'],
+        };
+
+        let obj02 = {};
+
+        deepCopy(obj02, obj01);
+        console.log(obj02);
+        obj01.info.desc = 'github';
+        console.log(obj02);
+        console.log(obj01);
+        //函数
+        function deepCopy(newObj, oldObj) {
+            for (let key in oldObj) {
+                // 获取属性值 oldObj[key]
+                let item = oldObj[key];
+                // 判断这个值是否是数组
+                if (item instanceof Array) {
+                    newObj[key] = [];
+                    deepCopy(newObj[key], item);
+                } else if (item instanceof Object) {
+                    // 判断这个值是否是对象
+                    newObj[key] = {};
+                    deepCopy(newObj[key], item);
+                } else {
+                    // 简单数据类型，直接赋值
+                    newObj[key] = item;
+                }
+            }
+        }
+
+    </script>
+</body>
+
+</html>

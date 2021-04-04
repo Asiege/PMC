@@ -62,6 +62,90 @@
         const son2 = new Son1('千古壹号', 28);
         console.log(JSON.stringify(son2));
 
+        console.log('--------');
+
+        var obj2 = {
+            nickName: 'qianguyihao',
+            age: 28,
+        };
+
+        function fn1(a) {
+            console.log(this);
+            console.log(this.nickName);
+            console.log(a);
+        }
+
+        fn1.apply(obj2, ['hello']);
+
+        console.log('--------');
+
+        const arr1 = [1, 9, 8, 7, 2];
+
+        const maxValue = Math.max.apply(Math, arr1);
+        console.log(maxValue);
+
+        const minValue = Math.min.apply(Math, arr1);
+        console.log(minValue);
+
+        const binDes = fn1.bind(obj2, 2);
+        console.log(binDes);
+
+        console.log('------');
+
+        var a = {
+            b: function () {
+                var func = function () {
+                    console.log(this.c)
+                }
+                func();
+            },
+            c: 'hello'
+        }
+        a.b();
+        //这里的this指向的是全局作用域，所以会返回undefined
+        var a = {
+            b: function () {
+                var that = this;
+                var func = function () {
+                    console.log(that.c)
+                }
+                func();
+            },
+            c: 'hello!'
+        }
+
+        a.b();
+        //可以通过赋值的方式将this赋值给that
+
+        var a = {
+            b: function () {
+                var func = function () {
+                    console.log(this.c);
+                }.bind(this);
+                func();
+            },
+            c: 'hello!!'
+        }
+
+        a.b();
+
+        var a = {
+            b: function () {
+                var func = function () {
+                    console.log(this.c);
+                }
+                func.bind(this)();
+            },
+            c: 'hello!!!'
+        }
+        a.b();
+
+        function f(y, z) {
+            return this.x + y + z;
+        }
+        var m = f.bind({ x: 2 }, 2);
+        console.log(m);
+        console.log(m(3));
     </script>
 </body>
 
