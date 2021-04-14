@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        let calculator = {
+            read() {
+                this.name = +prompt('第一个值',);
+                this.name2 = +prompt('第二个值',);
+            },
+            sum() {
+                return this.name + this.name2;
+            },
+            mul() {
+                return this.name * this.name2;
+            }
+        };
+        calculator.read();
+        alert(calculator.sum());
+        alert(calculator.mul());
+        */
+
+        let ladder = {
+            step: 0,
+            up() {
+                return this.step++;;
+            },
+            down() {
+                return this.step++;
+            },
+            showStep: function () { // 显示当前的 step
+                alert(this.step);
+            }
+        };
+        // ladder.up().up().down().showStep();
+        alert(ladder.up().step);
+
+    </script>
+</body>
+
+</html>

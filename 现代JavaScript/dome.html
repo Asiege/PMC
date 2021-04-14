@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* for (let i = 1; i <= 10; i++) {
+
+            //如果为真，跳过循环体的剩余部分。
+            if (!(i % 2)) alert(i);
+
+        } 
+        let i = 0;
+
+        while (i < 3) {
+            alert(`namber ${i}!`);
+            i++
+        }
+
+
+        for (; ;) {
+            let pass = prompt('输入大于100的数', "");
+
+            if (pass > 100) {
+                break;
+            }
+        }
+
+        do {
+            let pass = prompt('输入大于100的数', "");
+        } while (num <= 100 && num);
+
+*/
+        let num = 10
+        let a = 0;  // 素数的个数
+
+        for (let i = 2; i < num; i++) {// 对每个自然数 i
+            for (a = 2; a < i; a++) {//寻找一个除数……
+                if (i % a === 0) {
+                    break;// 不是素数，跳出检查下一个
+                }
+            }
+            //检查i是否符合条件
+            if (i <= a && i != 1) {
+                console.log(i);
+            }
+
+        }
+
+        let n = 10;
+
+        nextPrime:
+        for (let i = 2; i <= n; i++) { // 对每个自然数 i
+
+            for (let j = 2; j < i; j++) { // 寻找一个除数……
+                if (i % j == 0) continue nextPrime; // 不是素数，则继续检查下一个
+            }
+
+            alert(i); // 输出素数
+        }
+
+
+    </script>
+</body>
+
+</html>

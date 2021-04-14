@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* function checkAge(age) {
+            return (age > 18) ? true : confirm('Do you have your parents permission to access this page?');
+        }
+        function checkAge(age) {
+            return (age > 18) || confirm('Do you have your parents permission to access this page?');
+        }
+
+        function min(a, b) {
+            if (a < b) {
+                return a;
+            } else {
+                return b;
+            }
+        } 
+        let passWord1 = +prompt('输入X', "");
+        let passWord2 = +prompt('输入N', "");
+        alert(pow(passWord1, passWord2))
+        function pow(x, n) {
+            let a = x;
+            for (let i = 1; i < n; i++) {
+                a = a * x;
+            }
+            return a;
+        }
+
+        function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+        }
+
+        function showOk() {
+            alert('You agreed.');
+        }
+        function showCancel() {
+            alert('You canceled the execution');
+        }
+
+        ask('Do you agree?', showOk, showCancel);
+
+
+        function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+        }
+
+        ask(
+            'Do you agree?',
+            function () { alert('You agreed'); },
+            function () { alert('You canceled the execution'); }
+        );
+*/
+        let age = prompt('What is your age?', 18);
+
+        let welcome = (age < 18) ?
+            function () { alert('hello!'); } :
+            function () { alert('Greetings!') };
+
+        welcome();
+    </script>
+</body>
+
+</html>
