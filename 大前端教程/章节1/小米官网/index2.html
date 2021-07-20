@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=html, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    a {
+
+        background: #000;
+    }
+
+    .nav {
+        border: 1px solid #000;
+        height: 50px;
+        width: 600px;
+        position: relative;
+    }
+
+    .containerbox {
+        position: absolute;
+        top: 9px;
+        left: 50px;
+        display: none;
+        text-decoration: none;
+        color: rgb(173, 173, 173);
+        font-size: 12px;
+        margin-right: 10px;
+        background: #000;
+        float: left;
+    }
+
+    .nav:hover .containerbox {
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="nav">
+        <a href="" class="box1">你好</a>
+        <span class="containerbox">11</span>
+        <a href="" class="box2">你好2</a>
+    </div>
+</body>
+
+</html>

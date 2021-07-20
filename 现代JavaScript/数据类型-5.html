@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    /*
+    编写函数 camelize(str) 将诸如 “my-short-string” 之类的由短划线分隔的单词变成骆驼式的 “myShortString”。
+
+    即：删除所有短横线，并将短横线后的每一个单词的首字母变为大写。
+    */
+    /* let arr = [1, 2, 3, 4, 5];
+    function camelize(str) {
+
+        return str
+            .split('-')
+            //.map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+            .map(function (word, index) {
+                return index == 0 ? word : word[0].toUpperCase() + word.slice(1)
+            }
+            )
+            .join('');
+    }
+    alert(camelize("my-short-string")); */
+
+</script>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /*
+        alert(`My\n`.length);
+         */
+
+        //toLowerCase() 和 toUpperCase() 方法可以改变大小写：
+
+        /* alert('Interface'.toUpperCase());
+
+        let str = 'stringify';
+
+        alert(str.slice(1, 5));
+
+        ucFirst("john") == "John";
+
+        function ucFirst(str) {
+            if (!str) return str;
+
+            return str[0].toUpperCase() + str.slice(1);
+        }
+        alert(ucFirst("john"));
+        
+
+        truncate("What I'd like to tell on this topic is:", 20);
+
+        function truncate(str, maxlength) {
+            if (str.length > maxlength) {
+                alert(str.slice(0, maxlength - 1) + "...");
+            } else {
+                alert(str.slice(str));
+            }
+            return
+        }
+
+        // 实例
+        function truncate(str, maxlength) {
+            return (str.length > maxlength) ?
+                str.slice(0, maxlength - 1) + '…' : str;
+        }
+        
+
+        function checkSpam(str) {
+            return (~str.indexOf('ViAgRA')) ? true : false;
+        }
+
+        alert(checkSpam('buy ViAgRA now'));
+
+        function checkSpam(str) {
+            let lowerStr = str.toLowerCase();
+
+            return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+        }
+
+        alert(checkSpam('buy ViAgRA now'));
+        alert(checkSpam('free xxxxx'));
+        alert(checkSpam("innocent rabbit"));
+
+        */
+
+        function extractCurrencyValue(str) {
+            return +str.slice(1);
+        }
+
+        alert(extractCurrencyValue('$120') === 120);
+    </script>
+</body>
+
+</html>

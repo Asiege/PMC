@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* let styles = ['Jazz', 'Blues'];
+        styles.push('Rock-n-Roll');
+
+        alert(styles); 
+
+        function sumInput() {
+            let numbers = [];
+
+            while (true) {
+                let value = prompt('A number please?', 0);
+
+                if (value === "" || value === null || !isFinite(value)) break;
+
+                numbers.push(+value);
+            }
+
+            let sum = 0;
+            for (let number of numbers) {
+                sum += number;
+            }
+            return sum;
+        }
+
+        alert(sumInput());
+        */
+        function getMaxSubSum(arr) {
+            let maxSum = 0;
+            let partialSum = 0;
+
+            for (let item of arr) {
+                partialSum += item;
+                maxSum = Math.max(maxSum, partialSum);
+                if (partialSum < 0) partialSum = 0;
+                console.log(maxSum);
+                console.log(partialSum);
+                console.log('----');
+            }
+            return maxSum;
+        }
+
+        alert(getMaxSubSum([100, -9, 2, -3, 5])); // 100
+    </script>
+</body>
+
+</html>
