@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //能返回传入的任意两个数字的最大值
+    /* 
+    function numbermax(a, b) {
+        if (a > b) {
+            return a;
+        } else {
+            return b;
+        }
+    } 
+
+    console.log(numbermax(100, 500));
+
+    */
+
+    //能返回传入的任意三个数字的最大值
+    /* function numbermax(a, b, c) {
+        if (a > b && a > c) {
+            return a;
+        } else if (b > a && b > c) {
+            return b;
+        } else {
+            return c;
+        }
+    }
+    console.log(numbermax(50, 100, 500)); */
+
+    //能判断传入的一个数字是否是质数true，如果不是质数返回falsa
+    /* function prime1(num) {
+        if (num == 0 || num == 1) {
+            return false;
+        }
+        for (let i = 2; i < num; i++) {
+            if (num % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    var a = prime1(7);
+    console.log(a) */
+    //能翻转传入的任意数组，并把翻转结果通过返回值返回
+    /* function array1(arr) {
+        var sum = [];
+        for (let i = arr.length - 1; i >= 0; i--) {
+            sum[sum.length] = arr[i]
+        }
+        return sum;
+    }
+    var a = [1, 2, 3, 4]
+
+    console.log(array1(a)); */
+    //能对所有传入的数组按照从小到大进行排序，并把排序结果通过返回值返回
+    function array2(array) {
+        for (let i = 0; i < array.length - 1; i++) {
+            for (let j = 0; j < array.length - i - 1; j++) {
+                if (array[j] > array[j + 1]) {
+                    var temp = array[j + 1];
+                    array[j + 1] = array[j];
+                    array[j] = temp;
+
+                }
+            }
+        }
+        return array;
+    }
+    var a = [5, 2, 3, 4]
+
+    console.log(array2(a));
+</script>
+
+<body>
+
+</body>
+
+</html>

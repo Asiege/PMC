@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    //根据指定日期计算是当前年的第几天
+    /* function getDayNum(time) {
+        var thisDay = new Date(time);   //获取指定时间
+        var getYear = thisDay.getFullYear();    //对应年份
+        var firstDay = +new Date(getYear.toString());   //1970-当前年份
+        var thisDays = +new Date(time);     //1970-当前时间
+        var Times = (thisDay - firstDay) / 1000;    //两个时间相差秒数
+        var d = Math.ceil(Times / 60 / 60 / 24) + 1     //用毫秒数计算出当前时间
+        return d + "天"
+    } 
+
+    console.log(getDayNum("2020-2-2"));
+
+    */
+
+    //使用Math对象，制作一个16进制的随机顏色
+    var arrays = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F"];
+    var color1 = [];    //存放数组
+    for (let i = 0; i <= 5; i++) {
+        color1.push(arrays[parseInt(Math.random() * arrays.length)]);
+    }
+    var color2 = color1.join("");
+    console.log(color2);
+</script>
+
+<body>
+
+</body>
+
+</html>
