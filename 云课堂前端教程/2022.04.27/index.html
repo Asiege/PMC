@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>商品列表</h1>
+    <ul></ul>
+    <input type="" id="min" value="" />-
+    <input type="" id="big" value="" /><br><br>
+    <button type="" inputmode="">筛选价格范围</button>
+    <script>
+        var date = [{
+            id: 1,
+            brand: '小米',
+            Price: 3999
+        }, {
+            id: 2,
+            brand: 'oppo',
+            Price: 999
+        }, {
+            id: 3,
+            brand: '荣耀',
+            Price: 1299
+        }, {
+            id: 4,
+            brand: '华为',
+            Price: 169
+        }, {
+            id: 5,
+            brand: '一加',
+            Price: 1999
+        },]
+        var ul = document.querySelector("ul");
+        function setDate(a) {
+            a.forEach((item, i) => {
+                var li = document.createElement('li')
+                li.innerHTML = item.brand + ':' + item.Price + "元"
+                ul.appendChild(li)
+            });
+        }
+        setDate(date)
+        var button1 = document.querySelector('button')
+        button1.onclick = function () {
+            var min = document.querySelector("#min")
+            var big = document.querySelector("#big")
+            console.log(min.value)
+            console.log(big.value)
+            var num2 = date.filter((item) => {
+                return item.Price >= min.value && item.Price <= big.value
+            })
+            ul.innerHTML = ''
+            setDate(num2)
+        }
+
+
+    </script>
+</body>
+
+</html>

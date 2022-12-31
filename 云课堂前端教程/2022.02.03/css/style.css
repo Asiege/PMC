@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 1070px;
+    height: 400px;
+    position: relative;
+    margin: 0 auto;
+}
+.arrowL{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(150,150,150,0.8);
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    z-index:1;
+    top: 50%;
+    top: calc(50% - 25px);
+    cursor:pointer;
+    display: none;
+}
+.arrowR{
+    width: 20px;
+    height: 50px;
+    position: absolute;
+    background-color: rgb(150,150,150,0.8);
+    text-align: center;
+    right: 0;
+    line-height: 50px;
+    color: white;
+    z-index:1;
+    top: calc(50% - 25px);
+    cursor:pointer;
+    display: none;
+}
+
+.img2 .imgs{
+    position: absolute;
+    width: 1070px;  
+    height: 400px;
+    opacity: 0;
+    transition: opacity 1.0s;
+}
+.img2 img.active{
+    opacity: 1;
+    
+}
+.soi{
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    display: flex;
+    justify-content:flex-end;
+    bottom: 10px;
+    flex-wrap: wrap;
+    right: 30px;
+}
+.soi .spot{
+    width: 6px;
+    height: 6px;
+    background:rgb(110,110,110,0.8);    
+    border: 2px solid rgb(180, 180, 180,0.8);
+    border-radius:50%;
+    margin: 0 4px;
+    cursor:pointer;
+}
+.soi div.spotwhite{
+    background-color: rgb(255,255,255,0.8);
+    border: 2px solid rgb(110, 110, 110,0.8);
+}
+
+

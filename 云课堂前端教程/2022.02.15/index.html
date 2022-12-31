@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="list">
+        <button class="listbtn active" data-index="0">tab1</button>
+        <button class="listbtn" data-index="1">tab2</button>
+        <button class="listbtn" data-index="2">tab3</button>
+    </div>
+
+    <div class="dis">
+        <div class="distext active" data-index="0">
+            <H1>第一个按钮</H1>
+        </div>
+        <div class="distext" data-index="1">
+            <H1>第二个按钮</H1>
+        </div>
+        <div class="distext" data-index="2">
+            <H1>第三个按钮</H1>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        class Student {
+            constructor(btns, tabs) {
+                this.btns = btns;
+                this.tabs = tabs;
+                this.listBtn = document.querySelector(btns)
+                this.listTab = document.querySelector(tabs)
+                this.currentIndex = 0;
+                var tais = this;
+                this.listBtn.onclick = function (e) {
+                    if (e.target.parentElement == this) {
+                        var index = parseInt(e.target.dataset.index);
+                        tais.removeActive(tais.currentIndex);
+                        tais.currentIndex = index;
+                        tais.addActive(tais.currentIndex);
+                    }
+                }
+            }
+            removeActive(index) {
+                this.listTab.children[index].classList.remove('active')
+                this.listBtn.children[index].classList.remove('active')
+            }
+            addActive(index) {
+                this.listTab.children[index].classList.add('active')
+                this.listBtn.children[index].classList.add('active')
+            }
+        }
+        let one = new Student('.list', '.dis')
+        console.log(one)
+    </script>
+
+</body>
+
+
+</html>

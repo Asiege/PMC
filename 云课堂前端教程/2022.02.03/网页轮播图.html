@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="arrowR">&lt;</div>
+        <div class="arrowL">&gt;</div>
+        <div class="img2">
+            <img src="./img/mi1.webp" alt="" class="imgs active">
+            <img src="./img/mi2.webp" alt="" class="imgs">
+            <img src="./img/mi3.jpg" alt="" class="imgs">
+            <div></div>
+        </div>
+
+        <div class="soi">
+            <div class="spot spotwhite" data-index='0'></div>
+            <div class="spot" data-index='1'></div>
+            <div class="spot" data-index='2'></div>
+        </div>
+    </div>
+    <script>
+        var arrowR = document.querySelector('.arrowR')
+        var arrowL = document.querySelector('.arrowL')
+        var box = document.querySelector('.box')
+        var jisu = 0;
+        var imgs = document.querySelectorAll('.imgs');
+        var spot = document.querySelectorAll('.spot')
+        box.addEventListener('mouseover', function () {
+            arrowR.style.display = 'block';
+            arrowL.style.display = 'block';
+        })
+        box.addEventListener('mouseout', function () {
+            arrowR.style.display = 'none';
+            arrowL.style.display = 'none';
+        })
+        arrowR.addEventListener('click', function () {
+            imgs[jisu].classList.remove('active');
+            spot[jisu].classList.remove('spotwhite');
+            jisu++;
+            if (jisu == imgs.length) {
+                jisu = 0;
+            }
+            imgs[jisu].classList.add('active');
+            spot[jisu].classList.add('spotwhite');
+        })
+
+        arrowL.addEventListener('click', function () {
+            imgs[jisu].classList.remove('active');
+            spot[jisu].classList.remove('spotwhite');
+            jisu--;
+            if (jisu == -1) {
+                jisu = imgs.length - 1;
+            }
+            imgs[jisu].classList.add('active');
+            spot[jisu].classList.add('spotwhite');
+        })
+        var soi = document.querySelector('.soi');
+        soi.addEventListener('click', function (e) {
+            if (e.target.classList.contains('spot')) {
+                // console.log(e.target.classList.contains('spot'))
+                console.log(+jisu)
+                // imgs[e.target.dataset.index].classList.remove('active');
+                imgs[+jisu].classList.remove('active');
+                spot[+jisu].classList.remove('spotwhite');
+                jisu = e.target.dataset.index
+                imgs[+jisu].classList.add('active');
+                spot[+jisu].classList.add('spotwhite');
+            }
+        })
+        var aotu1 = setInterval(function () {
+            arrowR.click();
+        }, 3000)
+
+        box.addEventListener('mouseenter', function () {
+            clearInterval(aotu1);
+        })
+        box.addEventListener('mouseleave', function () {
+            aotu1 = setInterval(function () {
+                arrowR.click();
+            }, 3000)
+        })
+    </script>
+</body>
+
+</html>

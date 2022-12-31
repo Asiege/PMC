@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .node_all {
+        background: red;
+    }
+</style>
+
+
+<body>
+    <ul>
+        <li>西施</li>
+        <li>貂蝉</li>
+        <li>昭君</li>
+        <li>凤姐</li>
+        <li>芙蓉姐姐</li>
+    </ul>
+    <button type="button" value="提交">按钮</button>
+
+    <script>
+        var ul = document.querySelector('ul');
+
+
+        // ul.onclick = function (e) {
+        //     var target = e.target;
+
+        //     if (target.nodeName.toLowerCase() == 'li') {
+        //         target.style.background = 'red'
+        //     }
+
+        // }
+
+        ul.onclick = function (e) {
+            e.target.style.background = 'red'
+        }
+        var button = document.querySelector('button')
+
+        button.onclick = function (e) {
+            console.log(e.target)
+            var li = document.createElement('li')
+            li.innerHTML = "你好"
+            ul.insertBefore(li, ul.childNodes[0])
+        }
+    </script>
+</body>
+
+</html>

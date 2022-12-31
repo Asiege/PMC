@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    table {
+        border: 2px solid rgb(90, 90, 90);
+        background-color: rgba(254, 180, 190);
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    td {
+        height: 20px;
+        width: 500px;
+        border: 2px solid rgb(90, 90, 90);
+        color: #1a1a1a;
+    }
+
+    td:nth-child(1) {
+        width: 100px;
+    }
+
+    tr:nth-child(1) {
+        background-color: blueviolet;
+    }
+</style>
+
+<body>
+    请输入姓名：<input type="text" name="" id="input1" value="">
+    </br>
+    请输入邮箱：<input type="text" name="" id="input2" value="">
+    </br>
+    <button type="button">添加</button>
+    <table>
+        <thead>
+            <tr>
+                <td>姓名</td>
+                <td>邮箱</td>
+            </tr>
+        </thead>
+    </table>
+
+    <script>
+        var input1 = document.querySelector('#input1')
+        var input2 = document.querySelector('#input2')
+        var btn = document.querySelector('button')
+        var thead1 = document.querySelector("thead")
+
+        btn.onclick = function () {
+            var tr = document.createElement("tr")
+            var td1 = document.createElement("td")
+            var td2 = document.createElement("td")
+            if (input1.value != "" && input2.value != "") {
+                console.log(input1.value)
+                console.log(input2.value)
+                td1.innerHTML = input1.value
+                td2.innerHTML = input2.value
+                thead1.appendChild(tr)
+                tr.appendChild(td1)
+                tr.appendChild(td2)
+            } else {
+                alert('请输入文本')
+            }
+        }
+
+    </script>
+</body>
+
+</html>

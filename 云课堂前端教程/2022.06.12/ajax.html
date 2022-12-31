@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //get封装
+        // function get(url) {
+        //     let xhr = new XMLHttpRequest();
+
+        //     xhr.onreadystatechange = function () {
+        //         if (xhr.readyState == 4) {
+        //             if (xhr.status >= 200 && xhr.status < 300) {
+        //                 let response = JSON.parse(xhr.response)
+        //                 console.log(response)
+        //             }
+        //             else {
+        //                 console.log("失败：" + xhr.status)
+        //             }
+        //         }
+        //     }
+        //     let url1 = `http://api.btstu.cn/dyjx/api.php?url=${url}`;
+        //     xhr.open("GET", url1);
+        //     xhr.send()
+        // }
+        // get("https://www.douyin.com/video/7107613603435515173")
+
+        function post(username, password) {
+            let xhr = new XMLHttpRequest();
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        let response = JSON.parse(xhr.response)
+                        console.log(response)
+                    }
+                    else {
+                        console.log("失败：" + xhr.status)
+                    }
+                }
+            }
+            let url1 = `username=${username}&password=${password}`;
+            xhr.open("POST", url1);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            xhr.send(url1)
+        }
+        post("admin", "123456")
+
+    </script>
+</body>
+
+</html>

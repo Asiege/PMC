@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>这是第1</li>
+        <li>这是第2</li>
+        <li>这是第3</li>
+        <li>这是第4</li>
+        <li>这是第5</li>
+        <li>这是第6</li>
+        <li>这是第7</li>
+        <li>这是第8</li>
+    </ul>
+    <script>
+        var arr = ['第一个数组', '第二个数组', '第三个数组', '第四个数组', '第五个数组', '第六个数组', '第七个数组', '第八个数组']
+        var li = document.querySelectorAll("li")
+
+        li.forEach((item, i) => {
+            item.onclick = function () {
+                console.log(arr[i])
+            }
+        });
+    </script>
+</body>
+
+</html>

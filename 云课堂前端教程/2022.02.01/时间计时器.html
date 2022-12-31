@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    setInterval(function () {
+        var now = new Date();
+        var mth = now.getMonth() + 1;
+        var dd = now.getDate();
+        var yyyy = now.getFullYear();
+        var hh = now.getHours();
+        var mm = now.getMinutes();
+        var ss = now.getSeconds();
+        hh = check(hh)
+        mm = check(mm)
+        ss = check(ss)
+
+        //判断星期几函数
+        function str() {
+            var a = new Array("日", "一", "二", "三", "四", "五", "六");
+            var week = new Date().getDay();
+            var str = "星期" + a[week];
+            return str
+        }
+        var time2 = (yyyy + "年" + mth + "月" + dd + "日" + Wstr() + hh + ":" + mm + ":" + ss);
+
+        //时间双位显示判断语句
+        function check(a) {
+            if (a < 10) return "0" + a;
+            else return a;
+        }
+        var time1 = document.querySelector(".shijian")
+        time1.innerText = time2
+    }, 1000)
+
+
+</script>
+
+<body>
+    <div class="shijian"></div>
+</body>
+
+</html>

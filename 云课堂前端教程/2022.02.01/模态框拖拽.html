@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box {
+        width: 1200px;
+        height: 500px;
+        /* background-color: rgb(133, 193, 233); */
+        /* position: absolute */
+    }
+
+    .frame {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background-color: rgb(93, 135, 163);
+        cursor: move;
+    }
+</style>
+
+<body>
+    <div class="box">
+        <div class="frame"></div>
+    </div>
+</body>
+<script>
+    var frame = document.querySelector('.frame')
+    var box = document.querySelector('.box')
+    frame.addEventListener("mousedown", function (e) {
+        var x = e.pageX - frame.offsetLeft;
+        var y = e.pageY - frame.offsetTop;
+        document.addEventListener("mousemove", move);
+        function move(e) {
+            frame.style.left = e.pageX - x + "px";
+            frame.style.top = e.pageY - y + "px";
+            console.log(e.pageX);
+        }
+        document.addEventListener("mouseup", function () {
+            document.removeEventListener("mousemove", move);
+        })
+    })
+
+</script>
+
+</html>
