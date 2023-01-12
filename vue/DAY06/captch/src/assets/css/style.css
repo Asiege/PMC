@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+html {
+    background-color: rgb(240, 98, 109);
+    height: 100%;
+    width: 100%;
+}
+
+.head {
+    height: 90px;
+    display: flex;
+}
+
+.head h1 {
+    margin: auto;
+}
+
+.content {
+    min-height: 90vh;
+    display: flex;
+}
+
+.form {
+    width: 400px;
+    height: 440px;
+    color: rgb(238, 98, 106);
+    background-color: #fff;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 190px;
+    flex-direction: column;
+    position: relative;
+}
+
+input.username {
+    height: 34px;
+    width: 344px;
+    margin: 28px 0 28px 0;
+    border-width: 0 0 2px 0px;
+    border-color: rgb(100, 100, 100, 0.2);
+    background-color: transparent;
+    font-size: 16px;
+    color: #EC3A48;
+    outline: 0;
+}
+
+.bottom {
+    height: 46px;
+    width: 120px;
+    position: absolute;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: rgb(240, 98, 109);
+    border-width: 0;
+    bottom: 35px;
+    right: 25px;
+}
+
+.btn {
+    width: 340px;
+    height: 50px;
+    display: block;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+    background-color: rgb(240, 98, 109);
+    margin: 0 auto;
+    border-width: 0;
+}
+
+input:focus::placeholder {
+    opacity: 0;
+}
