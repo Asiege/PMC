@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let arr = [1, 5, 78, 6, 5, 78, 452, 45, 15, 77, 21, 1, 6, 89, 55, 11]
+    let minIndex = 0;
+    let len = arr.length;
+    let flag = [];
+
+    for (let i = 0; i < len; i++) {
+        for (let j = 0; j < len; j++) {
+            if (arr[minIndex] > arr[j]) {
+                minIndex = j
+            }
+        }
+        console.log('minIndex:' + minIndex)
+        console.log(arr)
+        flag.push(arr[minIndex])
+        arr.splice(minIndex, 1)
+        minIndex = 0
+    }
+
+    console.log(flag)
+</script>
