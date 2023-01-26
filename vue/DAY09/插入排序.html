@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 5, 78, 6, 5, 78, 452, 45, 15, 77, 21, 1, 6, 89, 55, 11]
+        let arr2 = []
+        const len = arr.length
+        let flag;
+        let index;
+        for (i = 0; i < len; i++) {
+            flag = arr.shift()
+            index = 0
+            for (j = 0; j < arr2.length; j++) {
+                if (flag > arr2[j]) {
+                    index++
+                    // console.log(arr2[j])
+                }
+            }
+            // console.log('flag：' + flag)
+            // console.log('index：' + index)
+            // console.log(arr2)
+            arr2.splice(index, 0, flag)
+        }
+        console.log(arr2)
+    </script>
+</body>
+
+</html>

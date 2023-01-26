@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr = [1, 5, 78, 6, 5, 78, 452, 45, 15, 77, 21, 1, 6, 89, 55, 11]
+        const len = arr.length
+        let flag;
+        let index;
+
+        for (i = 0; i < len; i++) {
+            flag = arr[i]
+            index = i - 1
+            for (j = index; j >= 0; j--) {
+                if (arr[j] > flag) {
+                    arr[index + 1] = arr[index]
+                    index--
+                    console.log(arr[j] + '比' + flag + '大,')
+                }
+            }
+            console.log('第' + i + '次，index=' + index)
+            console.log('第' + i + '次，arr[index+1]=' + (arr[index + 1]))
+            console.log('第' + i + '次，flag=' + flag)
+            console.log(arr)
+            arr[index + 1] = flag
+            console.log(arr)
+        }
+        console.log(arr)
+    </script>
+</body>
+
+</html>
